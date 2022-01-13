@@ -23,6 +23,6 @@ namespace lwlog::sinks
 	template<typename ThreadingPolicy>
 	void stderr_sink<ThreadingPolicy>::sink_it(const details::log_message& log_msg)
 	{
-		details::stream_writer::write(m_pattern.compile(log_msg));
+		details::stream_writer::write(this->m_pattern.compile(log_msg));
 	}
 }

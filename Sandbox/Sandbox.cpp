@@ -4,6 +4,7 @@
 
 int main()
 {
+	int o = 0;
 	auto console = std::make_shared<
 		lwlog::logger<
 			lwlog::default_log_policy,

@@ -1,5 +1,5 @@
 #pragma once
-
+# include "attribute.h"
 namespace lwlog::details::flag
 {
 	static flag_pair logger_name	= { "{name}",			"%n" };

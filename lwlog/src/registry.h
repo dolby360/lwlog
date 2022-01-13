@@ -1,7 +1,7 @@
 #pragma once
 
 #include <functional>
-
+#include <memory> // include this to use std::unique_ptr
 #include "fwd.h"
 #include "interface/logger_interface.h"
 

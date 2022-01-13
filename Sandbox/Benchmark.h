@@ -98,7 +98,7 @@ public:
 	InstrumentationTimer(std::string_view name)
 		: m_Name(name), m_Stopped(false)
 	{
-		m_StartTimepoint = std::chrono::high_resolution_clock::now();
+		// m_StartTimepoint = std::chrono::high_resolution_clock::now();
 	}
 
 	~InstrumentationTimer()
@@ -132,7 +132,7 @@ public:
 	Timer(std::string_view name)
 		: m_name(name), m_stopped(false)
 	{
-		m_start_timepoint = std::chrono::high_resolution_clock::now();
+		// m_start_timepoint = std::chrono::high_resolution_clock::now();
 	}
 
 	~Timer()

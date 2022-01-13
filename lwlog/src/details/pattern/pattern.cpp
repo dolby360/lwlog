@@ -1,7 +1,7 @@
 #include "pattern.h"
 #include "format_data.h"
 #include "color_format_data.h"
-
+#include <iostream> // delete
 namespace lwlog::details
 {
 	std::string pattern::compile(const log_message& log_msg)
@@ -80,6 +80,12 @@ namespace lwlog::details
 		for (const auto& flag : verbose_flags)
 			if (verbose_datetime_data[flag])
 				m_formatters.push_back(verbose_datetime_data[flag]);
+
+		for (auto it = klo.cbegin(); it != klo.cend(); ++it) {
+        	std::cout << "{" << (*it).first << ": " << (*it).second << "}\n";
+		}
+
+		int o = klo.size();
 
 		for (const auto& flag : short_flags)
 			if (shortened_logger_data[flag])

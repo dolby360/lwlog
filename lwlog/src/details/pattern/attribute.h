@@ -1,7 +1,9 @@
 #pragma once
 
 #include <variant>
-
+#if __GNUC__
+#include <string>
+#endif
 namespace lwlog::details
 {
 	struct flag_pair

@@ -31,7 +31,7 @@ namespace lwlog::sinks
 	file_sink<ThreadingPolicy>::~file_sink()
 	{
 		for (const auto& log_msg : m_messages)
-			details::file_writer::write(m_pattern.compile(log_msg));
+			details::file_writer::write(this->m_pattern.compile(log_msg));
 	}
 
 	template<typename ThreadingPolicy>

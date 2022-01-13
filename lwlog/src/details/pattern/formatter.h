@@ -1,4 +1,6 @@
 #pragma once
+#include <cstring>
+#include "../log_message.h"
 
 namespace lwlog::details
 {
@@ -7,7 +9,7 @@ namespace lwlog::details
 		virtual ~formatter() = default;
 		virtual void format(std::string&, const log_message&) = 0;
 
-		static void format_attribute(std::string& pattern, flag_pair flags, std::string_view value)
+		static void format_attribute(std::string& pattern,const flag_pair flags, std::string_view value)
 		{
 			const auto& [verbose, shortened] = flags;
 			while (std::strstr(pattern.data(), verbose.data()))
